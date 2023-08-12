@@ -2,8 +2,8 @@
  * @Author: zouyaoji@https://github.com/zouyaoji
  * @Date: 2023-08-07 20:24:35
  * @Description: Do not edit
- * @LastEditors: zouyaoji 370681295@qq.com
- * @LastEditTime: 2023-08-12 23:46:26
+ * @LastEditors: Birk Skyum birk.skyum@pm.me
+ * @LastEditTime: 2023-08-13 01:36:51
  * @FilePath: \vue-map-demo\src\common\webgl-ext\layer\InterpolationLayer.ts
  */
 import {
@@ -144,6 +144,7 @@ export default class InterpolationLayer extends ColormapLayer {
           {
             target: gl.TEXTURE_2D,
             attachment: createTexture(gl, {
+              internalFormat: (gl as WebGL2RenderingContext).RGBA32F,
               width: width,
               height: height,
               minMag: gl.LINEAR,
